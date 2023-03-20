@@ -1,0 +1,162 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Pittsburgh}
+%Information to be included in the title page:
+\title{\textsc{solid} principles}
+\author{Ethan Kent}
+\institute{Spoonflower}
+\date{\today}
+\usepackage{graphicx,microtype}
+\usepackage[osf]{libertine}
+% \usepackage{biblatex}
+\usepackage[notes,backend=biber]{biblatex-chicago}
+\addbibresource{solid.bib}
+
+\begin{document}
+
+
+\frame{\titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Purpose of the \textsc{solid} principles}
+  \begin{quote}
+
+    The \textsc{solid} principles tell us how to arrange our functions and data
+    structures into~.~.~. grouping[s] of functions and data. The goal of the
+    principles is the creation of mid-level software structures that:
+
+    \begin{itemize}
+      \item Tolerate change,
+      \item Are easy to understand, and
+      \item Are the basis of components that can be used in many software
+            systems.\footnote{\cite[p.~58]{clean-arch}.}
+    \end{itemize}
+
+  \end{quote}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\textsc{solid} principles: not just for \textsc{oop}}
+  \center
+  \includegraphics[height=0.618\textheight]{bob-tweet}
+  \footnote{\cite{martin-tweet}.}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The \textsc{solid} principles, listed}
+
+  \begin{itemize}
+    \item[S] The Single-Responsibility Principle.
+    \item[O] The Open--Closed Principle.
+    \item[L] The Liskov Substitution Principle.
+    \item[I] The Interface-Segregation Principle.
+    \item[D] The Dependency-Inversion Principle.
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SRP
+% ------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{The Single-Responsibility Principle, defined}
+
+  \begin{quote}
+    A module should have one, and only one, reason to
+    change.\footnote{\cite[p.~62]{clean-arch}.}
+  \end{quote}
+
+  \begin{quote}
+    A module should be responsible to one, and only one, user or
+    stakeholder.\footnote{\cite[p.~62]{clean-arch}.}
+  \end{quote}
+
+  \begin{quote}
+    A module should be responsible to one, and only one,
+    actor.\footnote{\cite[p.~62]{clean-arch}.}
+  \end{quote}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Single-Responsibility Principle, continued}
+
+\end{frame}
+
+% --------------------------------------
+
+\begin{frame}
+  \frametitle{The Single-Responsibility Principle, continued}
+
+  The \emph{actor} or \emph{user/stakeholder} idea means code that accounting
+  asks you to change shouldn't affect code that SEO asks you to change, for
+  example.
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% Open–Closed
+% ------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{The Open--Closed Principle, defined}
+
+  \begin{quote}
+    A software artifact should be open for extension but closed for
+    modification.\footnote{\cite[p.~70]{clean-arch}.}
+  \end{quote}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% Liskov
+% ------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{The Single-Responsibility Principle, defined}
+
+  \begin{quote}
+    Let $\phi(x)$ be a property provable about objects $x$ of type $T$. Then
+    $\phi(y)$  should be true for objects $y$ of type $S$ where $S$
+    is a subtype of $T$.\footnote{\cite[p.~1812]{liskov}.}
+  \end{quote}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% Interface Segregation
+% ------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{The Single-Responsibility Principle, defined}
+
+  \begin{quote}
+    Keep interfaces small so that users don't end up depending on things they
+    don't need.\footnote{\cite{solid-relevance}.}
+  \end{quote}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% Dependency Inversion
+% ------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{The Single-Responsibility Principle, defined}
+
+  \begin{quote}
+    Depend in the direction of abstraction. High level modules should not depend
+    upon low level details.\footnote{\cite{solid-relevance}.}
+  \end{quote}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Back matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Bibliography}
+  \begin{centering}
+    \printbibliography
+  \end{centering}
+\end{frame}
+
+\end{document}
