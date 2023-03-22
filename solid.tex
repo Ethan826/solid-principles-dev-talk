@@ -5,7 +5,7 @@
 \author{Ethan Kent}
 \institute{Spoonflower}
 \date{\today}
-\usepackage{graphicx,microtype}
+\usepackage{graphicx,microtype,listings,hyperref}
 \usepackage[osf]{libertine}
 % \usepackage{biblatex}
 \usepackage[notes,backend=biber]{biblatex-chicago}
@@ -80,11 +80,6 @@
   \end{quote}
 \end{frame}
 
-\begin{frame}
-  \frametitle{The Single-Responsibility Principle, continued}
-
-\end{frame}
-
 % --------------------------------------
 
 \begin{frame}
@@ -93,19 +88,26 @@
   The \emph{actor} or \emph{user/stakeholder} idea means code that accounting
   asks you to change shouldn't affect code that SEO asks you to change, for
   example.
+
+  \bigskip
+
+  Let's look at code.
 \end{frame}
 
 % ------------------------------------------------------------------------------
 % Open–Closed
 % ------------------------------------------------------------------------------
 
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{The Open--Closed Principle, defined}
 
   \begin{quote}
     A software artifact should be open for extension but closed for
     modification.\footnote{\cite[p.~70]{clean-arch}.}
   \end{quote}
+
+  Let's look at some old code in \href{https://github.com/Spoonflower/baerlauch/blob/de1ea0d44b9479968705b31c4d1c89a8ad3b37de/app/assets/javascripts/react/components/Product/ProductForm.js\#L178-L197}{Baerlauch}.
+
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -113,7 +115,7 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}
-  \frametitle{The Single-Responsibility Principle, defined}
+  \frametitle{The Liskov Substitution Principle, defined}
 
   \begin{quote}
     Let $\phi(x)$ be a property provable about objects $x$ of type $T$. Then
@@ -122,12 +124,33 @@
   \end{quote}
 \end{frame}
 
+% --------------------------------------
+
+\begin{frame}
+  \frametitle{The Liskov Substitution Principle, continued}
+
+  Put in plainer language, this means that we mustn't subtype something in a way
+  that means the subtype can't be used everywhere we could use the supertype.
+
+\end{frame}
+
+% --------------------------------------
+
+\begin{frame}
+  \frametitle{The Liskov Substitution Principle, continued}
+
+  Liskov seems to apply to functional code in terms of generics, but because
+  TypeScript enforces structural types, the type system should generally enforce
+  correct subtyping.
+
+\end{frame}
+
 % ------------------------------------------------------------------------------
 % Interface Segregation
 % ------------------------------------------------------------------------------
 
 \begin{frame}
-  \frametitle{The Single-Responsibility Principle, defined}
+  \frametitle{The Interface-Segregation Principle, defined}
 
   \begin{quote}
     Keep interfaces small so that users don't end up depending on things they
@@ -140,7 +163,7 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}
-  \frametitle{The Single-Responsibility Principle, defined}
+  \frametitle{The Dependency-Inversion Principle, defined}
 
   \begin{quote}
     Depend in the direction of abstraction. High level modules should not depend
