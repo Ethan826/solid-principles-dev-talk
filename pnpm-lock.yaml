@@ -9,6 +9,7 @@ specifiers:
   '@types/node': ^18.15.5
   '@types/node-fetch': ^2.6.2
   '@types/react': ^18.0.28
+  '@types/react-dom': ^18.0.11
   '@typescript-eslint/eslint-plugin': ^5.43.0
   '@typescript-eslint/parser': ^5.56.0
   dropbox: ^10.34.0
@@ -27,6 +28,7 @@ specifiers:
   monocle-ts: ^2.3.13
   newtype-ts: ^0.3.5
   react: ^18.2.0
+  react-dom: ^18.2.0
   remote-data-ts: ^3.0.1
   schemata-ts: ^1.4.0
   ts-jest: ^29.0.5
@@ -46,6 +48,7 @@ dependencies:
   monocle-ts: 2.3.13_fp-ts@2.13.1
   newtype-ts: 0.3.5_y4ecnzjsatnzoei5elwf4wjeqa
   react: 18.2.0
+  react-dom: 18.2.0_react@18.2.0
   remote-data-ts: 3.0.1_fp-ts@2.13.1
   schemata-ts: 1.4.0_t5bkp4jqihrjuinkklm7zjjkke
   zod: 3.21.4
@@ -56,6 +59,7 @@ devDependencies:
   '@types/node': 18.15.5
   '@types/node-fetch': 2.6.2
   '@types/react': 18.0.28
+  '@types/react-dom': 18.0.11
   '@typescript-eslint/eslint-plugin': 5.56.0_2hcjazgfnbtq42tcc73br2vup4
   '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
   eslint: 8.36.0
@@ -1722,6 +1726,12 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/react-dom/18.0.11:
+    resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
+    dependencies:
+      '@types/react': 18.0.28
     dev: true
 
   /@types/react/18.0.28:
@@ -4282,6 +4292,16 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
+  /react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.0
+    dev: false
+
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
@@ -4377,6 +4397,12 @@ packages:
       get-intrinsic: 1.2.0
       is-regex: 1.1.4
     dev: true
+
+  /scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
 
   /schemata-ts/1.4.0_t5bkp4jqihrjuinkklm7zjjkke:
     resolution: {integrity: sha512-iqAkslOUvyJBR5EDSObK3o/xa1eMV0qmCl1OuQI3dHspcR1R9veOrRXKiuJUNqTYVBDWM6yCH7fgc1k0n6Ayvw==}

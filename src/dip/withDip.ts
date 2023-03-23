@@ -45,7 +45,10 @@ export class SecureFileWriter {
     private fileProvider: FileServiceOop
   ) {}
 
-  public write = async (secret: string, filename: string): Promise<void> => {
+  public writeSecretToFile = async (
+    secret: string,
+    filename: string
+  ): Promise<void> => {
     const encrypted = await this.cryptoProvider.encrypt(secret);
 
     await this.fileProvider.writeFile(encrypted, filename);
